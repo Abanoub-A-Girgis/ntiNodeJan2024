@@ -6,10 +6,10 @@
 /* const calculateTax = (price, rate) => {
     return price * rate;
 } */
-const calculateTax = (price, rate) => price * rate;
+// const calculateTax = (price, rate) => price * rate;
 
-tax01 = calculateTax(100, 0.05);
-console.log(tax01);
+// tax01 = calculateTax(100, 0.05);
+// console.log(tax01);
 
 /* tax01 = calculateTax(100, 0.05);
 tax02 = calculateTax(1000, 0.15);
@@ -263,3 +263,24 @@ console.log(Math.round(-2.6)); */
 
 //console.log("2023 has been passed, Hello 2024");
 
+let primes = [];
+
+function isPrime(number) {
+    if (number <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function getPrimes(limit) {
+    for (let i = 2; i < limit; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
+}
+
+console.log(getPrimes(100));
