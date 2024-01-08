@@ -263,24 +263,50 @@ console.log(Math.round(-2.6)); */
 
 //console.log("2023 has been passed, Hello 2024");
 
-let primes = [];
+// let primes = [];
 
-function isPrime(number) {
-    if (number <= 1) return false;
-    for (let i = 2; i <= Math.sqrt(number); i++) {
-        if (number % i === 0) {
-            return false;
-        }
-    }
-    return true;
-}
+// function isPrime(number) {
+//     if (number <= 1) return false;
+//     for (let i = 2; i <= Math.sqrt(number); i++) {
+//         if (number % i === 0) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
 
-function getPrimes(limit) {
-    for (let i = 2; i < limit; i++) {
-        if (isPrime(i)) {
-            primes.push(i);
-        }
-    }
-}
+// function getPrimes(limit) {
+//     for (let i = 2; i < limit; i++) {
+//         if (isPrime(i)) {
+//             primes.push(i);
+//         }
+//     }
+// }
 
-console.log(getPrimes(100));
+// console.log(getPrimes(100));
+
+
+// const emps = require("./ourData/employees.json");
+
+// console.log(emps);
+
+// Date
+
+
+// console.log(postDate.getDay());
+// console.log(postDate.getMonth());
+// console.log(postDate.getFullYear());
+// console.log(postDate.getDate());
+
+/*
+module get date written in Arabic :
+الأحد 21 يناير 2024
+*/
+
+// const postDate = new Date("2024-12-21");
+// const { arPostDate } = require("./getDateModule");
+// console.log(arPostDate(postDate));
+
+const empData = require("./ourData/employees.json")
+const { SortEmployees } = require("./SortEmployeesModule")
+SortEmployees(empData);
